@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-color: white;
+}
+
+.section-items {
+  display: flex;
+  margin-left: 75px;
+  margin-bottom: 130px;
+}
+
+.section-item {
+  width: 250px;
+  margin-top: 30px;
+  color: #414141;
+}
+
+.section-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.section-button:hover {
+  background-color: red;
+}
+
+.section-item-divider {
+  background-color: #414141;
+  margin: 10px 0;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .section-items {
+    flex-direction: column; /* Stack items vertically */
+    margin-left: 0; /* Remove the left margin */
+    margin-top: 50px; /* Adjust the top margin */
+    margin-bottom: 50px; /* Adjust the bottom margin */
+
+    flex-direction: column; /* Stack items vertically */
+    margin-left: 20px; /* Add left margin */
+    margin-right: 20px; /* Add right margin */
+    margin-top: 50px; /* Adjust the top margin */
+    margin-bottom: 50px; /* Adjust the bottom margin */
+  }
+  
+  .section-item {
+    width: 100%; /* Expand item width to fill the container */
+    margin-bottom: 50px; /* Add some spacing between stacked items */
+  }
+
+  .section-item-divider {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  /* CSS styles for small devices */
+  .section-items {
+    flex-direction: column; /* Stack items vertically */
+    margin-left: 0; /* Remove the left margin */
+    margin-top: 50px; /* Adjust the top margin */
+    margin-bottom: 50px; /* Adjust the bottom margin */
+  }
+  
+  .section-item {
+    width: 100%; /* Expand item width to fill the container */
+    margin-bottom: 70px; /* Add some spacing between stacked items */
+  }
+
+  .section-item-divider {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .section-items {
+    flex-direction: row; /* Revert to default horizontal layout */
+    margin-left: 75px; /* Restore the left margin */
+    margin-top: 100px; /* Restore the top margin */
+    margin-bottom: 130px; /* Restore the bottom margin */
+  }
+  
+  .section-item {
+    width: 250px; /* Restore the original width */
+    margin-bottom: 0; /* Remove the margin-bottom */
+    margin: 0 25px;
+  }
+
+  .section-item-divider {
+    display: none;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  /* CSS styles for large devices */
+  .section-item {
+    margin: 0 50px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  /* CSS styles for extra large devices */
+  .section-item {
+    margin: 0 75px;
+  }
+}
+
+/* Custom devices (wider screens, 1390px and up) */
+@media only screen and (min-width: 1390px) {
+  /* CSS styles for wider screens */
+  .section-item {
+    margin: 0 100px;
+  }
+}
