@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Products from "./components/Products";
 import Services from "./components/Services";
+import Reviews from "./components/Reviews";
 
 const App = () => {
   return (

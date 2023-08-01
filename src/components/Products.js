@@ -23,7 +23,6 @@ const productsList = [
   "Recycled Asphalt",
   "Crushed Concrete",
   "Top Soil",
-  "Mason Sand",
   "Pea Gravel",
   '5/8" Granite Chips',
 ];
