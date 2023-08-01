@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"; // Import Axios
+import { v4 as uuidv4 } from "uuid";
 
 import "../styles/Reviews.css";
 
 const submitApiUrl = "http://localhost:3001/api/newreview";
-const getApiUrl = "http://localhost:3001/api/getreviews";
+const getApiUrl = "http://localhost:3001/api/getapprovedreviews";
 
 const Reviews = () => {
   const [userName, setUserName] = useState("");
@@ -16,8 +17,15 @@ const Reviews = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setButtonDisabled(true);
+    setButtonText("Sending...");
+
     if (userName.trim() !== "" && reviewText.trim() !== "") {
-      const newReview = { userName, reviewText };
+      const newReview = {
+        id: uuidv4(), // Generate a unique ID for the new review
+        userName,
+        reviewText,
+      };
 
       // Send POST request using Axios
       axios
@@ -30,8 +38,9 @@ const Reviews = () => {
           setButtonDisabled(true);
         })
         .catch((error) => {
+          alert("Error submitting review.");
           console.error("Error submitting review:", error);
-          setButtonText("Error...");
+          setButtonDisabled(false);
         });
     }
   };
@@ -63,7 +72,7 @@ const Reviews = () => {
   return (
     <div className="reviews-outer-container">
       <div className="reviews-container">
-        <h2>User Reviews</h2>
+        <h2>Reviews</h2>
         <div className="reviews-list">
           {reviews.length === 0 ? (
             <p>No reviews yet.</p>
