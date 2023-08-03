@@ -4,8 +4,13 @@ import { v4 as uuidv4 } from "uuid";
 
 import "../styles/Reviews.css";
 
-const submitApiUrl = "http://localhost:3001/api/newreview";
-const getApiUrl = "http://localhost:3001/api/getapprovedreviews";
+// const submitApiUrl = "http://localhost:3001/midway-materials/newreview";
+// const getApiUrl = "http://localhost:3001/midway-materials/getapprovedreviews";
+
+const submitApiUrl =
+  "https://wfwebmaster-api.herokuapp.com/midway-materials/newreview";
+const getApiUrl =
+  "https://wfwebmaster-api.herokuapp.com/midway-materials/getapprovedreviews";
 
 const Reviews = () => {
   const [userName, setUserName] = useState("");

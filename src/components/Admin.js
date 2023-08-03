@@ -2,9 +2,16 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../styles/Admin.css";
 
-const getApiUrl = "http://localhost:3001/api/getallreviews";
-const approveApiUrl = "http://localhost:3001/api/approvereview";
-const deleteApiUrl = "http://localhost:3001/api/deletereview";
+// const getApiUrl = "http://localhost:3001/midway-materials/getallreviews";
+// const approveApiUrl = "http://localhost:3001/midway-materials/approvereview";
+// const deleteApiUrl = "http://localhost:3001/midway-materials/deletereview";
+
+const getApiUrl =
+  "https://wfwebmaster-api.herokuapp.com/midway-materials/getallreviews";
+const approveApiUrl =
+  "https://wfwebmaster-api.herokuapp.com/midway-materials/approvereview";
+const deleteApiUrl =
+  "https://wfwebmaster-api.herokuapp.com/midway-materials/deletereview";
 
 const Admin = () => {
   const [reviews, setReviews] = useState([]);
